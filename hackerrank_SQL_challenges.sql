@@ -58,11 +58,58 @@ SELECT city, state FROM station;
 
 ----------
 
+-- Weather Observation Station 3
+-- Query a list of CITY names from STATION for cities that have an even ID number. Print the results in any order, but exclude duplicates from the answer.
+
+-- Solution: 
+SELECT DISTINCT city FROM station WHERE id % 2 = 0;
+
+----------
+
+-- Weather Observation Station 4
+-- Find the difference between the total number of CITY entries in the table and the number of distinct CITY entries in the table.
+
+-- Solution: 
+SELECT (COUNT(city) - COUNT(DISTINCT city)) FROM station;
+
+----------
+
+-- African Cities
+-- Given the CITY and COUNTRY tables, query the names of all cities where the CONTINENT is 'Africa'.
+-- Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+-- Solution: 
+SELECT city.name FROM city JOIN country ON city.countrycode = country.code WHERE continent = 'Africa';
+
+----------
+
+-- Average Population of Each Continent
+-- Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
+-- Note: CITY.CountryCode and COUNTRY.Code are matching key columns.
+
+-- Solution: 
+SELECT country.continent, FLOOR(AVG(city.population)) FROM city JOIN country ON city.countrycode = country.code GROUP BY country.continent;
+
+----------
+
 -- 
 -- 
 
 -- Solution: 
 
+----------
+
+-- 
+-- 
+
+-- Solution: 
+
+----------
+
+-- 
+-- 
+
+-- Solution: 
 
 ----------
 
