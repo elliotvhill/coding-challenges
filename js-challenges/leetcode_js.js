@@ -3,7 +3,7 @@
 //////////////////////////////////
 
 
-// 1672. Richest Customer Wealth - Easy
+// 1672. Richest Customer Wealth - Easy - √
 
     // You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
 
@@ -41,7 +41,7 @@
 
     // let accounts = [[1, 5], [7, 3], [3, 5]]
 
-    //// SOLUTION: ////
+//// SOLUTION: ////
     // const maximumWealth = function(accounts) {
     //     let sum = 0
     //     for (let i = 0; i < accounts.length; i++) {
@@ -62,6 +62,7 @@
 //////////////////////////////
 
 // 412. Fizz Buzz - Easy
+
     // Given an integer n, return a string array answer (1-indexed) where:
 
     // answer[i] == "FizzBuzz" if i is divisible by 3 and 5.
@@ -88,17 +89,89 @@
     // 1 <= n <= 10^4
 
 
-// SOLUTION: //
-    const fizzBuzz = function(n) {
+//// SOLUTION: ////
+    // const fizzBuzz = function(n) {
         
-    };
+    // };
+
+    
+//////////////////////////////
+
+// 1. Two Sum - Easy
+
+    // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+    // You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+    // You can return the answer in any order.
+
+    
+    // Example 1:
+    // Input: nums = [2,7,11,15], target = 9
+    // Output: [0,1]
+    // Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
+
+    // Example 2:
+    // Input: nums = [3,2,4], target = 6
+    // Output: [1,2]
+    
+    // Example 3:
+    // Input: nums = [3,3], target = 6
+    // Output: [0,1]
+    
+
+    // Constraints:
+    // 2 <= nums.length <= 104
+    // -109 <= nums[i] <= 109
+    // -109 <= target <= 109
+    // Only one valid answer exists.
+    
+
+    // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+    
+//// SOLUTION: ////
+    // const twoSum = function(nums, target) {
+    //     for (let i = 0; i < nums.length; i++){
+    //         let missingNum = target - nums[i]
+    //         if (nums.includes(missingNum)) {
+    //             console.log('index of missingNum is: ', nums.indexOf(nums[i]))
+    //         } else {
+    //             return console.log('no match for target num in nums array')
+    //         }
+    //     }
+    // }
+
+    // twoSum([2,7,11,15], 9)
+    // twoSum([2,11,15], 9)
+    // twoSum([3,3], 6)
 
 
 
 
 //////////////////////////////
 
-//////////////////////////////
+// 268. Missing Number - Easy √
+    // Given an array nums containing n distinct numbers in the range[0, n], return the only number in the range that is missing from the array.
+
+const missingNumber = function (nums) {
+    let n = nums.length
+    let sortedNums = nums.toSorted()
+    let i = 0
+
+    while (i <= n) {
+            
+            if (sortedNums.includes(i)) { i++ }
+            else {
+                console.log(`num ${i} is missing`)
+                return i
+            }
+
+        }
+}
+
+missingNumber([3,0,1,2])
+missingNumber([3,0,1])
+missingNumber([3])
 
 //////////////////////////////
 
