@@ -9,17 +9,10 @@ const map = function(arr, fn) {
     let n = 0
     
     for (let i = 0; i < arr.length; i++) {
-        n = fn(arr[i])
-        console.log(n)
+        n = fn(arr[i], i)
         newArray.push(n)
     }
 
-    console.log(newArray)
     return newArray
     
 };
-
-arr = [1, 2, 3]
-fn = function plusone(n) { return n + 1 }
-// fn = function plusI(n, i) { return n + i }
-map(arr, fn)
