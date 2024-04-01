@@ -14,7 +14,6 @@ const map = function(arr, fn) {
         newArray.push(n)
     }
 
-    console.log(newArray)
     return newArray
     
 };
