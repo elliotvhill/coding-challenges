@@ -1,17 +1,37 @@
-// LC 2629 - Function Composition -- S: O(n), T: O(n)
+// LC 2703 - Return Length of Arguments Passed -- S: O(1), T: O(1)
 
 /**
- * @param {Function[]} functions
- * @return {Function}
+ * @param {...(null|boolean|number|string|Array|Object)} args
+ * @return {number}
  */
-const compose = function (functions) {
-    return function (x) {
-        if (functions.length === 0) {
-            return x
-        }
-        return functions.reduceRight((acc, fn) => fn(acc), x)
-    }
-}
+const argumentsLength = function(...args) {
+    return args.length
+};
+
+
+argumentsLength(1, 2, 3); // 3
+argumentsLength([{}, null, "3"])
+
+
+
+
+
+//////////////////////////////////
+
+// LC 2629 - Function Composition -- S: O(n), T: O(n)
+
+// /**
+//  * @param {Function[]} functions
+//  * @return {Function}
+//  */
+// const compose = function (functions) {
+//     return function (x) {
+//         if (functions.length === 0) {
+//             return x
+//         }
+//         return functions.reduceRight((acc, fn) => fn(acc), x)
+//     }
+// }
 
 // OR
 // const compose = function(functions) {
@@ -28,14 +48,14 @@ const compose = function (functions) {
 // };
 
 
-const fn = compose([(x) => x + 1, (x) => 2 * x])
+// const fn = compose([(x) => x + 1, (x) => 2 * x])
 //  fn(4) // returns 9
 
 // Test cases:
 // functions = [(x) => x + 1, (x) => x * x, (x) => 2 * x], (x = 4) // Output: 65
 // console.log(fn(4))
-functions = []
-console.log(fn(42))
+// functions = []
+// console.log(fn(42))
 
 
 
