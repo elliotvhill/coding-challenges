@@ -1,4 +1,9 @@
-// LC 2619 - Array Prototype Last -- S: O(n), T: O(1)
+// LC 2727 - Is Object Empty -- S: O(), T: O()
+
+////////////////////////////////
+
+
+// LC 2619 - Array Prototype Last -- S: O(1), T: O(1)
 
 // /**
 //  * @return {null|boolean|number|string|Array|Object}
