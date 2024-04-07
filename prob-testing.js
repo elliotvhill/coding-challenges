@@ -1,5 +1,26 @@
 // LC 2727 - Is Object Empty -- S: O(), T: O()
 
+// /**
+//  * @param {Object|Array} obj
+//  * @return {boolean}
+//  */
+const isEmpty = function(obj) {
+    // if (Array.isArray(obj) === true) {
+    //     console.log(obj.length === 0 ? true : false)
+    // }
+    return (console.log(Object.keys(obj).length < 1))
+};
+
+
+obj = { "x": 5, "y": 42 } // false
+isEmpty(obj)
+obj = {} // true
+isEmpty(obj)
+obj = [null, false, 0] // false
+isEmpty(obj)
+
+
+
 ////////////////////////////////
 
 
