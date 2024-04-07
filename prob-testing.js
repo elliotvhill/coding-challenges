@@ -1,4 +1,4 @@
-// LC 2727 - Is Object Empty -- S: O(), T: O()
+// LC 2727 - Is Object Empty -- S: O(1), T: O(n)
 
 // /**
 //  * @param {Object|Array} obj
