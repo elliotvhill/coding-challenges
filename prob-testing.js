@@ -1,18 +1,50 @@
-// LC 2703 - Return Length of Arguments Passed -- S: O(1), T: O(1)
+// LC 2666 - Allow One Function Call -- S: O(), T: O()
 
 /**
- * @param {...(null|boolean|number|string|Array|Object)} args
- * @return {number}
+ * @param {Function} fn
+ * @return {Function}
  */
-const argumentsLength = function(...args) {
-    return args.length
+const once = function(fn) {
+    return function (...args) {
+        for (let i = 0; i <= 0; i++) {
+            if (i === 0) {
+                return console.log(fn(...args))
+            } else {
+                return undefined
+            }
+        }
+    }
 };
 
 
-argumentsLength(1, 2, 3); // 3
-argumentsLength([{}, null, "3"])
+let fn = (a, b, c) => (a + b + c)
+calls = [[1,2,3],[2,3,6]]
+let onceFn = once(fn)
+onceFn(1,2,3); // 6
+onceFn(2,3,6); // returns undefined without calling fn
 
 
+
+
+
+
+
+//////////////////////////////////
+
+
+// LC 2703 - Return Length of Arguments Passed -- S: O(1), T: O(1)
+
+// /**
+//  * @param {...(null|boolean|number|string|Array|Object)} args
+//  * @return {number}
+//  */
+// const argumentsLength = function(...args) {
+//     return args.length
+// };
+
+
+// argumentsLength(1, 2, 3); // 3
+// argumentsLength([{}, null, "3"])
 
 
 
