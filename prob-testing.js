@@ -8,14 +8,14 @@
  */
 const chunk = function(arr, size) {
   
-    // is arr evenly divisible by size? -> is there an % ?
-    if (arr.length % size === 0) {
-        // for loop to create sub arrays of equal size
+    // is arr evenly divisible by size? -> is there an % ?'
+    // if there is a remainder % create sub array with length of %
+    if (arr.length % size !== 0) {
+        // create (last) sub array with length of remainder %
     } else {
-        // create last sub array with size of remainder %
+        // for loop to create sub arrays of equal size
     }
-    // if yes, create new Array(arrayLength) x num of subarrays needed
-    // if not evenly divisible, create max # even subarrays possible plus one additional with arr.length of the remainder -> %
+
     // create new Array(s) using array constructor -> Array(arrayLength) <- i.e. 'size'
     // iterate thru original array and push values to new subarray(s)
 
