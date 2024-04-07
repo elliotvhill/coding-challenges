@@ -1,27 +1,46 @@
+// LC 2619 - Array Prototype Last -- S: O(n), T: O(1)
+
+// /**
+//  * @return {null|boolean|number|string|Array|Object}
+//  */
+// Array.prototype.last = function() {
+//     return (this.length === 0 ? console.log(-1) : console.log(this[this.length - 1]))
+// };
+
+
+// const arr = [1, 2, 3];
+// const nums = [null, {}, 3]
+// arr.last(); // 3
+// nums.last(); // 3
+
+
+
+//////////////////////////////////
+
 // LC 2666 - Allow One Function Call -- S: O(), T: O()
 
-/**
- * @param {Function} fn
- * @return {Function}
- */
-const once = function(fn) {
-    return function (...args) {
-        for (let i = 0; i <= 0; i++) {
-            if (i === 0) {
-                return console.log(fn(...args))
-            } else {
-                return undefined
-            }
-        }
-    }
-};
+// /**
+//  * @param {Function} fn
+//  * @return {Function}
+//  */
+// const once = function(fn) {
+//     return function (...args) {
+//         for (let i = 0; i <= 0; i++) {
+//             if (i === 0) {
+//                 return console.log(fn(...args))
+//             } else {
+//                 return undefined
+//             }
+//         }
+//     }
+// };
 
 
-let fn = (a, b, c) => (a + b + c)
-calls = [[1,2,3],[2,3,6]]
-let onceFn = once(fn)
-onceFn(1,2,3); // 6
-onceFn(2,3,6); // returns undefined without calling fn
+// let fn = (a, b, c) => (a + b + c)
+// calls = [[1,2,3],[2,3,6]]
+// let onceFn = once(fn)
+// onceFn(1,2,3); // 6
+// onceFn(2,3,6); // returns undefined without calling fn
 
 
 
