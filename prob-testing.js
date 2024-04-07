@@ -1,23 +1,58 @@
+// LC 2677 - Chunk Array -- S: O(), T: O()
+
+
+/**
+ * @param {Array} arr
+ * @param {number} size
+ * @return {Array}
+ */
+const chunk = function(arr, size) {
+  
+    // is arr evenly divisible by size? -> is there an % ?
+    if (arr.length % size === 0) {
+        // for loop to create sub arrays of equal size
+    } else {
+        // create last sub array with size of remainder %
+    }
+    // if yes, create new Array(arrayLength) x num of subarrays needed
+    // if not evenly divisible, create max # even subarrays possible plus one additional with arr.length of the remainder -> %
+    // create new Array(s) using array constructor -> Array(arrayLength) <- i.e. 'size'
+    // iterate thru original array and push values to new subarray(s)
+
+    // let division = arr.length % size
+    // console.log(division)
+
+};
+
+
+// arr = [1,2,3,4,5], size = 1 // Output: [[1],[2],[3],[4],[5]]
+chunk([1,2,3,4,5], 1)
+// arr = [1, 9, 6, 3, 2], size = 3 // Output: [[1,9,6],[3,2]]
+chunk([1, 9, 6, 3, 2], 3)
+
+
+///////////////////////////////
+
 // LC 2727 - Is Object Empty -- S: O(1), T: O(n)
 
 // /**
 //  * @param {Object|Array} obj
 //  * @return {boolean}
 //  */
-const isEmpty = function(obj) {
-    // if (Array.isArray(obj) === true) {
-    //     console.log(obj.length === 0 ? true : false)
-    // }
-    return (console.log(Object.keys(obj).length < 1))
-};
+// const isEmpty = function(obj) {
+//     // if (Array.isArray(obj) === true) {
+//     //     console.log(obj.length === 0 ? true : false)
+//     // }
+//     return (console.log(Object.keys(obj).length < 1))
+// };
 
 
-obj = { "x": 5, "y": 42 } // false
-isEmpty(obj)
-obj = {} // true
-isEmpty(obj)
-obj = [null, false, 0] // false
-isEmpty(obj)
+// obj = { "x": 5, "y": 42 } // false
+// isEmpty(obj)
+// obj = {} // true
+// isEmpty(obj)
+// obj = [null, false, 0] // false
+// isEmpty(obj)
 
 
 
