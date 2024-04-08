@@ -6,14 +6,19 @@
  * @param {number} size
  * @return {Array}
  */
-const chunk = function(arr, size) {
-  
+const chunk = function (arr, size) {
+    let numberOfEvenArrays = null
+    let;
+    let lastSubArrSize = arr.length % size
+    let subArrays = Math.floor(arr.length % size)
+    console.log(`Last sub array size is: ${lastSubArrSize}, and other subArrays sizes are: ${subArrays}`)
     // is arr evenly divisible by size? -> is there an % ?'
     // if there is a remainder % create sub array with length of %
-    if (arr.length % size !== 0) {
-        // create (last) sub array with length of remainder %
+    if (lastSubArrSize === 0) {
+        //     // create (last) sub array with length of remainder %
+        numberOfEvenArrays = arr.length
     } else {
-        // for loop to create sub arrays of equal size
+    //     // for loop to create sub arrays of equal size
     }
 
     // create new Array(s) using array constructor -> Array(arrayLength) <- i.e. 'size'
