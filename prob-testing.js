@@ -1,6 +1,5 @@
 // LC 2677 - Chunk Array -- S: O(), T: O()
 
-
 /**
  * @param {Array} arr
  * @param {number} size
@@ -8,33 +7,43 @@
  */
 const chunk = function (arr, size) {
     let numberOfEvenArrays = null
-    let;
-    let lastSubArrSize = arr.length % size
-    let subArrays = Math.floor(arr.length % size)
-    console.log(`Last sub array size is: ${lastSubArrSize}, and other subArrays sizes are: ${subArrays}`)
-    // is arr evenly divisible by size? -> is there an % ?'
-    // if there is a remainder % create sub array with length of %
-    if (lastSubArrSize === 0) {
-        //     // create (last) sub array with length of remainder %
-        numberOfEvenArrays = arr.length
-    } else {
-    //     // for loop to create sub arrays of equal size
+    // let;
+    // is arr empty? -> return empty arr √
+    if (arr.length < 1) {
+        return console.log((arr = []))
+
+        // is arr.length < size? √
+    } else if (arr.length < size) {
+        return console.log(Array(arr))
+
+        // is arr.length > size?
+    } else if (arr.length > size) {
+        let lastSubArrSize = arr.length % size
+        let subArrays = Math.floor(arr.length % size)
+        console.log(
+            `Last sub array size is: ${lastSubArrSize}, and other subArrays sizes are: ${subArrays}`
+        )
+
+        // is arr evenly divisible by size? -> is there an % ?'
+        // if there is a remainder % create sub array with length of %
+        if (lastSubArrSize === 0) {
+            // create (last) sub array with length of remainder %
+            numberOfEvenArrays = arr.length
+        } else {
+            // for loop to create sub arrays of equal size
+        }
     }
 
     // create new Array(s) using array constructor -> Array(arrayLength) <- i.e. 'size'
     // iterate thru original array and push values to new subarray(s)
+}
 
-    // let division = arr.length % size
-    // console.log(division)
-
-};
-
-
+// chunk([], 1)
 // arr = [1,2,3,4,5], size = 1 // Output: [[1],[2],[3],[4],[5]]
-chunk([1,2,3,4,5], 1)
+chunk([1, 2, 3, 4, 5], 1)
 // arr = [1, 9, 6, 3, 2], size = 3 // Output: [[1,9,6],[3,2]]
 chunk([1, 9, 6, 3, 2], 3)
-
+// chunk([1, 9], 3)
 
 ///////////////////////////////
 
@@ -51,7 +60,6 @@ chunk([1, 9, 6, 3, 2], 3)
 //     return (console.log(Object.keys(obj).length < 1))
 // };
 
-
 // obj = { "x": 5, "y": 42 } // false
 // isEmpty(obj)
 // obj = {} // true
@@ -59,10 +67,7 @@ chunk([1, 9, 6, 3, 2], 3)
 // obj = [null, false, 0] // false
 // isEmpty(obj)
 
-
-
 ////////////////////////////////
-
 
 // LC 2619 - Array Prototype Last -- S: O(1), T: O(1)
 
@@ -73,13 +78,10 @@ chunk([1, 9, 6, 3, 2], 3)
 //     return (this.length === 0 ? console.log(-1) : console.log(this[this.length - 1]))
 // };
 
-
 // const arr = [1, 2, 3];
 // const nums = [null, {}, 3]
 // arr.last(); // 3
 // nums.last(); // 3
-
-
 
 //////////////////////////////////
 
@@ -101,21 +103,13 @@ chunk([1, 9, 6, 3, 2], 3)
 //     }
 // };
 
-
 // let fn = (a, b, c) => (a + b + c)
 // calls = [[1,2,3],[2,3,6]]
 // let onceFn = once(fn)
 // onceFn(1,2,3); // 6
 // onceFn(2,3,6); // returns undefined without calling fn
 
-
-
-
-
-
-
 //////////////////////////////////
-
 
 // LC 2703 - Return Length of Arguments Passed -- S: O(1), T: O(1)
 
@@ -127,11 +121,8 @@ chunk([1, 9, 6, 3, 2], 3)
 //     return args.length
 // };
 
-
 // argumentsLength(1, 2, 3); // 3
 // argumentsLength([{}, null, "3"])
-
-
 
 //////////////////////////////////
 
@@ -164,7 +155,6 @@ chunk([1, 9, 6, 3, 2], 3)
 //     }
 // };
 
-
 // const fn = compose([(x) => x + 1, (x) => 2 * x])
 //  fn(4) // returns 9
 
@@ -173,9 +163,6 @@ chunk([1, 9, 6, 3, 2], 3)
 // console.log(fn(4))
 // functions = []
 // console.log(fn(42))
-
-
-
 
 //////////////////////
 
