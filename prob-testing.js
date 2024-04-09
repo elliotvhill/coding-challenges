@@ -19,9 +19,9 @@ const chunk = function (arr, size) {
         // is arr.length > size?
     } else if (arr.length > size) {
         let lastSubArrSize = arr.length % size
-        let subArrays = Math.floor(arr.length % size)
+        let subArrays = Math.floor(arr.length / size)
         console.log(
-            `Last sub array size is: ${lastSubArrSize}, and other subArrays sizes are: ${subArrays}`
+            `Last sub array size is: ${lastSubArrSize}, and number of even subArrays is: ${subArrays}`
         )
 
         // is arr evenly divisible by size? -> is there an % ?'
@@ -40,7 +40,7 @@ const chunk = function (arr, size) {
 
 // chunk([], 1)
 // arr = [1,2,3,4,5], size = 1 // Output: [[1],[2],[3],[4],[5]]
-chunk([1, 2, 3, 4, 5], 1)
+// chunk([1, 2, 3, 4, 5], 1)
 // arr = [1, 9, 6, 3, 2], size = 3 // Output: [[1,9,6],[3,2]]
 chunk([1, 9, 6, 3, 2], 3)
 // chunk([1, 9], 3)
