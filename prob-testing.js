@@ -7,34 +7,34 @@
  */
 const chunk = function (arr, size) {
     let numberOfEvenArrays = null
-    // let;
     // is arr empty? -> return empty arr √
     if (arr.length < 1) {
         return console.log((arr = []))
 
-        // is arr.length < size? √
-    } else if (arr.length < size) {
+        // is arr.length <= size? √
+    } else if (arr.length <= size) {
         return console.log(Array(arr))
 
         // is arr.length > size?
     } else if (arr.length > size) {
         let lastSubArrSize = arr.length % size
+        let totalSubArrays = Math.ceil(arr.length / size)
         let subArrays = Math.floor(arr.length / size)
         console.log(
-            `Last sub array size is: ${lastSubArrSize}, and number of even subArrays is: ${subArrays}`
+            `Array length is: ${arr.length}. Size is: ${size}. The total number of subarrays is: ${totalSubArrays}, the number of even subArrays is: ${subArrays}, and the last sub array size is: ${lastSubArrSize}`
         )
 
         // is arr evenly divisible by size? -> is there an % ?'
         // if there is a remainder % create sub array with length of %
-        if (lastSubArrSize === 0) {
-            // create (last) sub array with length of remainder %
-            numberOfEvenArrays = arr.length
-        } else {
-            // for loop to create sub arrays of equal size
-        }
+        // if (lastSubArrSize === 0) {
+        //     // create (last) sub array with length of remainder %
+        //     numberOfEvenArrays = arr.length
+        // } else {
+        //     // for loop to create sub arrays of equal size
+        // }
     }
 
-    // create new Array(s) using array constructor -> Array(arrayLength) <- i.e. 'size'
+
     // iterate thru original array and push values to new subarray(s)
 }
 
