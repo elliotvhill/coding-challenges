@@ -21,7 +21,6 @@ const chunk = function (arr, size) {
 
         for (let i = 0; i < size - 1; i++) {
             let newArr = arr.toSpliced(i,1,arr[i])
-            // let newArr = Array.prototype.push(arr[i][i])
             console.log(newArr)
         }
 
