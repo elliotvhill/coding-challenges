@@ -6,40 +6,32 @@
  * @return {Array}
  */
 const chunk = function (arr, size) {
-    let numberOfEvenArrays = null
     let newArr = Array(arr)
-
-    if (arr.length < 1) {
+    if (arr.length < 1) { // return empty array
         return console.log((arr = []))
-    } else if (arr.length <= size) {
+
+    } else if (arr.length <= size) { // return all values in new subarray at arr[0]
         return console.log(newArr)
-        // return console.log(Array(arr))
-
-    // is arr.length > size?
-    } else if (arr.length > size) {
-        let lastSubArrSize = arr.length % size
-        let totalSubArrays = Math.ceil(arr.length / size)
-        let subArrays = Math.floor(arr.length / size)
-
-        for (let i = 0; i < size - 1; i++) {
+        
+    } else if (arr.length > size) { // is arr.length > size?
+        for (let i = 0; i < arr.length; i++) {
             newArr.push(arr[i])
             return console.log(newArr)
         }
-
         // console.log(
-        //     `Array length is: ${arr.length}. Size is: ${size}. The total number of subarrays is: ${totalSubArrays}, the number of even subArrays is: ${subArrays}, and the last sub array size is: ${lastSubArrSize}`
-        // )
-
-
+            //     `Array length is: ${arr.length}. Size is: ${size}. The total number of subarrays is: ${totalSubArrays}, the number of even subArrays is: ${subArrays}, and the last sub array size is: ${lastSubArrSize}`
+            // )
+            // let numberOfEvenArrays = null
+            // let lastSubArrSize = arr.length % size
+            // let totalSubArrays = Math.ceil(arr.length / size)
+            // let subArrays = Math.floor(arr.length / size)
     }
 }
 
-// chunk([], 1)
-// arr = [1,2,3,4,5], size = 1 // Output: [[1],[2],[3],[4],[5]]
-// chunk([1, 2, 3, 4, 5], 1)
-// arr = [1, 9, 6, 3, 2], size = 3 // Output: [[1,9,6],[3,2]]
-chunk([1, 9, 6, 3, 2], 3)
-// chunk([1, 9], 3)
+// chunk([], 1) // Output: []
+// chunk([1, 2, 3, 4, 5], 1) // Output: [[1],[2],[3],[4],[5]]
+chunk([1, 9, 6, 3, 2], 3) // Output: [[1,9,6],[3,2]]
+// chunk([1, 9], 3) // Output: [[1,9]]
 
 
 
