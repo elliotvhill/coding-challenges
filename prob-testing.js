@@ -7,11 +7,13 @@
  */
 const chunk = function (arr, size) {
     let numberOfEvenArrays = null
+    let newArr = Array(arr)
 
     if (arr.length < 1) {
         return console.log((arr = []))
     } else if (arr.length <= size) {
-        return console.log(Array(arr))
+        return console.log(newArr)
+        // return console.log(Array(arr))
 
     // is arr.length > size?
     } else if (arr.length > size) {
@@ -20,21 +22,15 @@ const chunk = function (arr, size) {
         let subArrays = Math.floor(arr.length / size)
 
         for (let i = 0; i < size - 1; i++) {
-            let newArr = arr.toSpliced(i,1,arr[i])
-            console.log(newArr)
+            newArr.push(arr[i])
+            return console.log(newArr)
         }
 
-        console.log(
-            `Array length is: ${arr.length}. Size is: ${size}. The total number of subarrays is: ${totalSubArrays}, the number of even subArrays is: ${subArrays}, and the last sub array size is: ${lastSubArrSize}`
-        )
+        // console.log(
+        //     `Array length is: ${arr.length}. Size is: ${size}. The total number of subarrays is: ${totalSubArrays}, the number of even subArrays is: ${subArrays}, and the last sub array size is: ${lastSubArrSize}`
+        // )
 
-        // if there is a remainder % create sub array with length of %
-        // if (lastSubArrSize === 0) {
-        //     // create (last) sub array with length of remainder %
-        //     numberOfEvenArrays = arr.length
-        // } else {
-        //     // for loop to create sub arrays of equal size
-        // }
+
     }
 }
 
