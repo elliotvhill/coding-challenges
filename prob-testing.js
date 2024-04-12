@@ -15,6 +15,7 @@ const chunk = function (arr, size) {
         
     } else if (arr.length > size) { // is arr.length > size?
         for (let i = 0; i < arr.length; i++) {
+            console.log(newArr)
             newArr.push(arr[i])
             return console.log(newArr)
         }
