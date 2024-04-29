@@ -6,7 +6,7 @@ Nice work so far!
 I would think about this problem in two parts:
 
 (1) How do I create one of the chunks?
-const chunk = function (arr, size, startIndex) {}
+const createOneChunk = function (arr, size, startIndex) {}
 // If start_index is out of bounds, return an empty array
 // Otherwise return a new non-empty array of the chuck of elements starting at startIndex
 // Note that the new array may have a length less than `size`
@@ -15,7 +15,9 @@ const chunk = function (arr, size, startIndex) {}
 const chunk = function (arr, size) {}
 // initialize a startIndex at 0 and an outputArray
 // while I still have more chucks to add to the outputArray
-//    create a chunk, add it to outputArray, and update startIndex
+//    create a chunk (use createOneChunk),
+//    add it to outputArray,
+//    and update startIndex
 */
 
 /**
