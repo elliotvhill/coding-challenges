@@ -8,6 +8,7 @@ I would think about this problem in two parts:
 (1) How do I create one of the chunks?
 const createOneChunk = function (arr, size, startIndex) {}
 // If start_index is out of bounds, return an empty array
+
 // Otherwise return a new non-empty array of the chuck of elements starting at startIndex
 // Note that the new array may have a length less than `size`
 
@@ -24,9 +25,19 @@ const chunk = function (arr, size) {}
  * @param {Array} arr
  * @param {number} size
  * @return {Array}
- */
+*/
 const chunk = function (arr, size) {
+    let startIndex = 0;
     let newArr = Array(arr)
+    if (startIndex < 0 || startIndex > arr.length) {
+        return console.log(arr = []) // return empty array if startIndex out of bounds
+    } else if (arr.length <= size) { // if size of chunk >= length of arr, return all values in new array
+        return console.log(newArr)
+    } else {
+        for (let i = startIndex; i <= arr.length; i++) { }
+    };
+
+    // let newArr = Array(arr)
     if (arr.length < 1) { // return empty array
         return console.log((arr = []))
 
